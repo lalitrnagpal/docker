@@ -1,5 +1,7 @@
 FROM openjdk:14-ea-alpine3.10
 
+WORKDIR /code
+
 # Install Stage
 RUN apk update
 
