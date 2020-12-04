@@ -1,0 +1,11 @@
+version: '3'
+services:
+   redis-server:
+      image: 'redis'
+      ports:
+         - '6379:6379'      
+   java-app:
+      build: .
+      restart: always
+      ports:
+         - '9000:9000'
