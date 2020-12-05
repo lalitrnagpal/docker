@@ -11,7 +11,7 @@
 	<groupId>com.example.spring</groupId>
 	<artifactId>dockerize-two</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dockerize-two</name>
+	<name>dockerize-boot-rest</name>
 	<description>Dockerize a Spring Boot App</description>
 
 	<properties>

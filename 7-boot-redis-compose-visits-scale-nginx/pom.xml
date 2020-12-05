@@ -11,8 +11,8 @@
 	<groupId>com.spring.redis.dockerize</groupId>
 	<artifactId>visit-count-redis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>visit-count-redis</name>
-	<description>Visit counts with shared Redis between Containers</description>
+	<name>boot-redis-compose-visits-scale-nginx</name>
+	<description>Boot Redis Visits App - Docker Compose - Scaling with Nginx</description>
 
 	<properties>
 		<java.version>11</java.version>
