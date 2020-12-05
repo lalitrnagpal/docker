@@ -8,11 +8,11 @@
 		<version>2.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example.spring</groupId>
-	<artifactId>dockerize-boot</artifactId>
+	<groupId>com.spring.redis.dockerize</groupId>
+	<artifactId>boot-redis-compose-nginx-push-hub</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>dockerize-boot</name>
-	<description>Dockerize a Spring Boot App</description>
+	<name>boot-redis-compose-nginx-push-hub</name>
+	<description>Boot Redis Visits App - Docker Compose - Scaling with Nginx</description>
 
 	<properties>
 		<java.version>11</java.version>
@@ -29,6 +29,14 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

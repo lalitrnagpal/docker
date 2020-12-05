@@ -11,7 +11,7 @@
 	<groupId>com.spring.redis.dockerize</groupId>
 	<artifactId>boot-redis-compose-visitstopage</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>visit-count-redis</name>
+	<name>boot-redis-compose-visitstopage</name>
 	<description>Visit counts with shared Redis between Containers - Docker Compose</description>
 
 	<properties>
