@@ -1,0 +1,41 @@
+version: '3.7'
+# Removed subprocess.CalledProcessError: Command '['/usr/local/bin/docker-credential-desktop', 'get']' returned non-zero exit status 1
+# I had this:
+# cat ~/.docker/config.json
+# {"auths":{},"credsStore":"", "credsStore":"desktop","stackOrchestrator":"swarm"}
+# I updated to this:
+# {"auths":{},"credsStore":"","stackOrchestrator":"swarm"}
+services:
+  todo-frontend:
+    #image: in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
+    build:
+      context: frontend/todo-app
+      #context: .
+      #dockerfile: Dockerfile
+    ports:
+      - "4000:80"
+    restart: always
+    depends_on: # Start the depends_on first
+      - todo-api 
+    #environment:
+      #BACKEND_API_BASE_URL: http://localhost:8080
+    networks:
+      - fullstack-application-network
+
+  todo-api:
+    #image: in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
+    build:
+      context: restful-web-services
+      #context: .
+      #dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
+    #depends_on: # Start the depends_on first
+      #- todo-api 
+    networks:
+      - fullstack-application-network
+  
+# Networks to be created to facilitate communication between containers
+networks:
+  fullstack-application-network:
