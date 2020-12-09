@@ -31,7 +31,7 @@ ARG DEPENDENCY=/fullstack/backend/target/dependency
 COPY --from=backend-build ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY --from=backend-build ${DEPENDENCY}/META-INF /app/META-INF
 COPY --from=backend-build ${DEPENDENCY}/BOOT-INF/classes /app
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.in28minutes.rest.webservices.restfulwebservices.RestfulWebServicesApplication"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","com.spring.boot.fullstack.webservices.restfulwebservices.RestfulWebServicesApplication"]
 ```
 
 #### React Front End
