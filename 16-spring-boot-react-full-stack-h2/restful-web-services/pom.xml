@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.spring.boot.fullstack</groupId>
-	<artifactId>10-spring-boot-react-full-stack-h2</artifactId>
+	<artifactId>16-spring-boot-react-full-stack-h2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>10-spring-boot-react-full-stack-h2</name>
+	<name>16-spring-boot-react-full-stack-h2</name>
 	<description>Demo project for Spring Boot, React - Full Stack</description>
 
 	<parent>
@@ -120,7 +120,7 @@
 			</plugin>
 
 			<!-- Dockerfile Maven -->
-			<!-- https://github.com/spotify/dockerfile-maven -->
+			<!-- https://github.com/spotify/dockerfile-maven  -->
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
@@ -129,7 +129,7 @@
 					<execution>
 						<id>default</id>
 						<goals>
-							<goal>build</goal>
+							<goal>build</goal> 
 						<!-- <goal>push</goal> -->
 						</goals>
 					</execution>
@@ -139,7 +139,7 @@
 					<tag>${project.version}</tag>
 					<skipDockerInfo>true</skipDockerInfo>
 				</configuration>
-			</plugin>
+			</plugin> 
 		</plugins>
 	</build>
 

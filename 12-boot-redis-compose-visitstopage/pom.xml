@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.spring.redis.dockerize</groupId>
-	<artifactId>18-boot-redis-compose-visits-crashit</artifactId>
+	<artifactId>12-boot-redis-compose-visitstopage</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>18-boot-redis-compose-visits-crashit</name>
-	<description>Visit counts with shared Redis between Containers - Crash and Restart</description>
+	<name>12-boot-redis-compose-visitstopage</name>
+	<description>Visit counts with shared Redis between Containers - Docker Compose</description>
 
 	<properties>
 		<java.version>11</java.version>

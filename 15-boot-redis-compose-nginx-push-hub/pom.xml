@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.spring.redis.dockerize</groupId>
-	<artifactId>20-boot-redis-compose-nginx-push-hub</artifactId>
+	<artifactId>15-boot-redis-compose-nginx-push-hub</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>20-boot-redis-compose-nginx-push-hub</name>
+	<name>15-boot-redis-compose-nginx-push-hub</name>
 	<description>Push to Docker Hub</description>
 
 	<properties>

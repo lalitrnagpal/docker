@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>17-boot-redis-compose-visitstopage</name>
+	<name>13-boot-redis-compose-visits-scale-nginx</name>
 	<comment></comment>
 	<projects>
 	</projects>

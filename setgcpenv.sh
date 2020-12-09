@@ -4,18 +4,18 @@ sudo apt update
 sudo apt upgrade
 
 # Install Java
-sudo apt install openjdk-14-jdk
+sudo apt install -y openjdk-14-jdk
 
 # Install Maven
-sudo apt install maven
+sudo apt install -y maven
 mvn -version
 
 # Install GIT
-sudo apt install git
+sudo apt install -y git
 git --version
 
 # Install Docker
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
@@ -25,7 +25,7 @@ sudo apt update
 
 apt-cache policy docker-ce
 
-sudo apt install docker-ce
+sudo apt install -y docker-ce
 
 # sudo systemctl status docker
 

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.spring.redis.dockerize</groupId>
-	<artifactId>19-boot-redis-compose-visits-scale-nginx</artifactId>
+	<artifactId>13-boot-redis-compose-visits-scale-nginx</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>19-boot-redis-compose-visits-scale-nginx</name>
+	<name>13-boot-redis-compose-visits-scale-nginx</name>
 	<description>Boot Redis Visits App - Docker Compose - Scaling with Nginx</description>
 
 	<properties>
