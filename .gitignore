@@ -28,3 +28,5 @@ hs_err_pid*
 /pom.xml
 /rosy-spring-280908-16590e6f3d6a.json
 node_modules
+
+node_modules.zip
