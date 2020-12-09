@@ -9,7 +9,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>17-spring-boot-react-full-stack-h2-multistage</name>
-	<description>Demo project for Spring Boot, React - Full Stack - Multistage</description>
+	<description>Demo project for Spring Boot, React - Multistage</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

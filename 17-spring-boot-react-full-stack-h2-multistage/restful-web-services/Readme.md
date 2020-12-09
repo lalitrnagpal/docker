@@ -1,28 +1,61 @@
 
-## Setup the GCP VM with the script
+### Multistage Example
 
-### Run the REST Service 
+#### Java REST Service
 
-#### Following are the curl commands to authenticate and then to invoke with the token
+```
+##### Stage 1 - Lets build the "deployable package"
+FROM maven:3.6.1-jdk-8-alpine as backend-build
+WORKDIR /fullstack/backend
 
-curl -i -X POST    -H "Content-Type:application/json"    -d '{
->   "username": "lalit",
->   "password": "dummy"
-> }'  'http://localhost:9000/authenticate'
+### Step 1 - Copy pom.xml and download project dependencies
 
-curl -i -X GET    -H "Authorization:Bearer <token here>"  'http://localhost:9000/jpa/users/lalit/todos'
+# Dividing copy into two steps to ensure that we download dependencies 
+# only when pom.xml changes
+COPY pom.xml .
+# dependency:go-offline - Goal that resolves all project dependencies, 
+# including plugins and reports and their dependencies. -B -> Batch mode
+RUN mvn dependency:go-offline -B
 
-#### To get the curl commands use the Talend API extension
+### Step 2 - Copy source and build "deployable package"
+COPY src src
+RUN mvn install -DskipTests
 
-![alt Talend REST API extension for Chrome](Talend.png)
+# Unzip
+RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
-#### React Frontend
+##### Stage 2 - Let's build a minimal image with the "deployable package"
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+ARG DEPENDENCY=/fullstack/backend/target/dependency
+COPY --from=backend-build ${DEPENDENCY}/BOOT-INF/lib /app/lib
+COPY --from=backend-build ${DEPENDENCY}/META-INF /app/META-INF
+COPY --from=backend-build ${DEPENDENCY}/BOOT-INF/classes /app
+ENTRYPOINT ["java","-cp","app:app/lib/*","com.in28minutes.rest.webservices.restfulwebservices.RestfulWebServicesApplication"]
+```
 
-$ npm install
+#### React Front End
 
-$ npm start
+```
+## Stage 1 - Lets build the "deployable package"
+FROM node:7.10 as frontend-build
+WORKDIR /fullstack/frontend
 
-##### Production Build 
+# Step 1 - Download all package dependencies first.
+# We will redownload dependencies only when packages change.
+COPY package.json package-lock.json ./
+RUN npm install
 
-$ npm run build
+# Step 2 - Copy all source and run build
+COPY . ./
+RUN npm run build
+
+## Stage 2 - Let's build a minimal image with the "deployable package"
+FROM nginx:1.12-alpine
+COPY --from=frontend-build /fullstack/frontend/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+
 

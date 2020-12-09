@@ -11,7 +11,6 @@ RUN npm install
 COPY . ./
 RUN npm run build
 
-
 ## Stage 2 - Let's build a minimal image with the "deployable package"
 FROM nginx:1.12-alpine
 COPY --from=frontend-build /fullstack/frontend/build /usr/share/nginx/html

@@ -3,12 +3,6 @@
 sudo apt update
 sudo apt upgrade
 
-# Install GIT
-sudo apt install -y git
-git --version
-
-git clone https://github.com/lalitnagpal/docker.git
-
 # Install Java
 sudo apt install -y openjdk-14-jdk
 
@@ -16,19 +10,9 @@ sudo apt install -y openjdk-14-jdk
 sudo apt install -y maven
 mvn -version
 
-# Install Node JS
-
-sudo apt install -y nodejs
-
-# Install npm
-
-sudo apt install -y npm
-
-# add these packages 
-
-npm add axios
-npm add react-router-dom
-npm add formik
+# Install GIT
+sudo apt install -y git
+git --version
 
 # Install Docker
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
@@ -55,6 +39,26 @@ su - ${USER}
 
 id -nG
 
+# Install Node JS
+
+sudo apt install -y nodejs
+
+# Install npm
+
+sudo apt install -y npm
+
+# add these packages 
+
+npm add axios
+
+npm add react-router-dom
+
+npm add formik
 
 
+mkdir work
+
+cd work
+
+git clone https://github.com/lalitnagpal/docker.git
 
