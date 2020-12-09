@@ -120,7 +120,7 @@
 			</plugin>
 
 			<!-- Dockerfile Maven -->
-			<!-- https://github.com/spotify/dockerfile-maven  -->
+			<!-- https://github.com/spotify/dockerfile-maven  
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
@@ -129,8 +129,8 @@
 					<execution>
 						<id>default</id>
 						<goals>
-							<goal>build</goal> 
-						<!-- <goal>push</goal> -->
+							<goal>build</goal> -->
+						<!-- <goal>push</goal> 
 						</goals>
 					</execution>
 				</executions>
@@ -139,7 +139,7 @@
 					<tag>${project.version}</tag>
 					<skipDockerInfo>true</skipDockerInfo>
 				</configuration>
-			</plugin> 
+			</plugin> -->
 		</plugins>
 	</build>
 

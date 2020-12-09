@@ -39,6 +39,21 @@ su - ${USER}
 
 id -nG
 
+# Install Node JS
+
+sudo apt install -y nodejs
+
+# Install npm
+
+sudo apt install -y npm
+
+# add these packages 
+
+npm add axios
+npm add react-router-dom
+npm add formik
+
+
 mkdir work
 
 cd work
