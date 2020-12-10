@@ -147,7 +147,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<repository>lalitrnagpal/${project.name}</repository>
+					<repository>lalitrnagpal/19-${project.name}</repository>
 					<tag>${project.version}</tag>
 					<skipDockerInfo>true</skipDockerInfo>
 				</configuration>

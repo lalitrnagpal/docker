@@ -2,7 +2,7 @@ version: '3.7'
 services:
 
   naming-server:
-    image: lalitrnagpal/netflix-eureka-naming-server:0.0.1-SNAPSHOT
+    image: lalitrnagpal/19-netflix-eureka-naming-server:0.0.1-SNAPSHOT
     ports:
       - "8761:8761"
     restart: always
@@ -10,9 +10,9 @@ services:
       - currency-compose-network
 
   currency-exchange-service:
-    image: lalitrnagpal/currency-exchange-service:0.0.1-SNAPSHOT
-    ports:
-      - "9000:9000"
+    image: lalitrnagpal/19-currency-exchange-service:0.0.1-SNAPSHOT
+#    ports:                     # commented for scaling
+#      - "9000:9000"            # commented for scaling
     restart: always
     depends_on:
       - naming-server
@@ -20,7 +20,7 @@ services:
       - currency-compose-network
 
   currency-conversion-service:
-    image: lalitrnagpal/currency-conversion-service:0.0.1-SNAPSHOT
+    image: lalitrnagpal/19-currency-conversion-service:0.0.1-SNAPSHOT
     ports:
       - "9100:9100"
     restart: always
