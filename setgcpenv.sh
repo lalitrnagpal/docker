@@ -47,10 +47,7 @@ npm add react-router-dom
 
 npm add formik
 
-
-mkdir work
-
-cd work
+# git clone the repository
 
 git clone https://github.com/lalitnagpal/docker.git
 
