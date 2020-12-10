@@ -31,30 +31,6 @@ sudo apt install -y docker-ce
 
 sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-sudo chmod +x /usr/local/bin/docker-compose
-
-# sudo systemctl status docker
-
-# To avoid sudo for running Docker
-
-sudo passwd ${USER}
-
-sudo usermod -aG docker ${USER}
-
-sudo usermod -aG docker-compose ${USER}
-
-su - ${USER}
-
-id -nG
-
-# So that we can login to Docker Hub
-
-sudo chmod 666 /var/run/docker.sock
-
-# Restart Docker
-
-sudo systemctl restart docker
-
 # Install Node JS
 
 sudo apt install -y nodejs
@@ -77,4 +53,26 @@ mkdir work
 cd work
 
 git clone https://github.com/lalitnagpal/docker.git
+
+# sudo systemctl status docker
+
+# So that we can login to Docker Hub
+
+sudo chmod 666 /var/run/docker.sock
+
+# Restart Docker
+
+sudo systemctl restart docker
+
+# To avoid sudo for running Docker
+
+sudo passwd ${USER}
+
+sudo usermod -aG docker ${USER}
+
+sudo usermod -aG docker-compose ${USER}
+
+su - ${USER}
+
+id -nG
 

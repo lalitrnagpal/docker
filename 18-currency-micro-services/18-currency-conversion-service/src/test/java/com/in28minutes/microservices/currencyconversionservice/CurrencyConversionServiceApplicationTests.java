@@ -1,4 +1,4 @@
-package com.boot.microservices.currencyconversionservice;
+package com.in28minutes.microservices.currencyconversionservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

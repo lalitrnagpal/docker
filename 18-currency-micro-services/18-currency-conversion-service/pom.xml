@@ -132,7 +132,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- Docker 
+			<!-- Docker -->
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
@@ -141,17 +141,17 @@
 					<execution>
 						<id>default</id>
 						<goals>
-							<goal>build</goal>-->
-							<!-- <goal>push</goal> 
+							<goal>build</goal>
+							<!-- <goal>push</goal> -->
 						</goals>
 					</execution>
 				</executions>
 				<configuration>
-					<repository>lalitrnagpal/${project.name}</repository>
+					<repository>in28min/${project.name}</repository>
 					<tag>${project.version}</tag>
 					<skipDockerInfo>true</skipDockerInfo>
 				</configuration>
-			</plugin>-->
+			</plugin>
 		</plugins>
 	</build>
 
