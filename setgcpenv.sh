@@ -31,6 +31,8 @@ sudo apt install -y docker-ce
 
 sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
+sudo chmod +x /usr/local/bin/docker-compose
+
 # Install Node JS
 
 sudo apt install -y nodejs
@@ -66,8 +68,6 @@ sudo systemctl restart docker
 sudo passwd ${USER}
 
 sudo usermod -aG docker ${USER}
-
-sudo usermod -aG docker-compose ${USER}
 
 su - ${USER}
 
